@@ -2,11 +2,11 @@
 
 void    ft_print_numbers(void)
 {
-    int number = 0;
-    while (number < 10)
+    char number;
+    number = '0';
+    while   (number <= '9')
     {
-        char c = number + '0';
-        write(1, &c, 1);
+        write   (1, &number, 1);
         number++;
     }
 }
