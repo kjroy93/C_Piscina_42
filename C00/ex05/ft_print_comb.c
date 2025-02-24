@@ -2,10 +2,11 @@
 
 void    ft_print_comb(void)
 {
-    char a = '0';
+    char a;
     char b;
     char c;
 
+    a = '0';
     while (a <= '7')
     {
         b = a + 1;
@@ -32,5 +33,5 @@ void    ft_print_comb(void)
 int main()
 {
     ft_print_comb();
-    return 0;
+    return (0);
 }
