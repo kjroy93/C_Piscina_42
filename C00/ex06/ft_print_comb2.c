@@ -1,43 +1,41 @@
 #include <unistd.h>
 
-#include <unistd.h>
-
-void ft_print_comb2(void)
+void    ft_putchar(char c)
 {
-    char a[2] = {'0', '0'};
-    char b[2];
+    write(1, &c, 1);
+}
 
-    while (a[0] <= '9')
+void    ft_print_comb2(void)
+{
+    int     first_pair;
+    int     second_pair;
+    char    combination[5];
+
+    first_pair = 0;
+    while (first_pair <= 98)
     {
-        b[0] = a[0];
-        b[1] = a[1] + 1;
-        while (b[0] <= '9')
+        second_pair = first_pair + 1;
+        while (second_pair <= 99)
         {
-            if (b[1] <= '9')
+            ft_putchar((first_pair / 10) + '0');
+            ft_putchar((first_pair % 10) + '0');
+            ft_putchar(' ');
+            ft_putchar((second_pair / 10) + '0');
+            ft_putchar((second_pair % 10) + '0');
+            if (!(first_pair == 98 && second_pair == 99))
             {
-                write(1, a, 2);
-                write(1, " ", 1);
-                write(1, b, 2);
-                if (!(a[0] == '9' && a[1] == '8'))
-                    write(1, ", ", 2);
+                ft_putchar(',');
+                ft_putchar(' ');
             }
-            b[1]++;
-            if (b[1] > '9')
-            {
-                b[1] = '0';
-                b[0]++;
-            }
+            second_pair++;
         }
-        if (a[1]++ == '9')
-        {
-            a[1] = '0';
-            a[0]++;
-        }
+        first_pair++;
     }
+
 }
 
 int main()
 {
     ft_print_comb2();
-    return 0;
+    return (0);
 }
