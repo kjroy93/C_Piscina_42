@@ -20,6 +20,6 @@ int main(void)
     int ********ptr8 = &ptr7;
     int *********ptr9 = &ptr8;
 
-    ft_ultimate_ft(*********ptr9);
+    ft_ultimate_ft(ptr9);
     printf("%i", *********ptr9);
 }
