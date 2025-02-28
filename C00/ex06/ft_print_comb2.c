@@ -22,7 +22,7 @@ void    ft_print_comb2(void)
             ft_putchar(' ');
             ft_putchar((second_pair / 10) + '0');
             ft_putchar((second_pair % 10) + '0');
-            if (!(first_pair == 98 && second_pair == 99))
+            if (!(first_pair == 98))
             {
                 ft_putchar(',');
                 ft_putchar(' ');
