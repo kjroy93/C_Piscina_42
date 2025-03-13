@@ -31,10 +31,10 @@
 
 void    find_letter(char *phrase, int size)
 {
-    int i;
+    int     i;
     char    letter;
-    int lng;
-    int found_a;
+    int     lng;
+    int     found_a;
 
     i = 0;
     lng = size;
@@ -46,13 +46,13 @@ void    find_letter(char *phrase, int size)
         if (letter == 'a')
         {
             write(1, &letter, 1);
-            found_a = 1;
+            found_a++;
             break;
         }
         i++;
     }
     if (!found_a)
-        write(1, "\n", 1);
+        write(1, "a\n", 1);
 }
 
 int main(void)
@@ -60,7 +60,7 @@ int main(void)
     char *word;
     int size;
 
-    word = "aaaaaaaaaaaaaaaaaaaaaa";
+    word = "ala";
     size = sizeof(word);
 
     find_letter(word, size);
